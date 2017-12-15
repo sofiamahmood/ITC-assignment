@@ -1,0 +1,50 @@
+
+<div style="text-align:center" class="container">
+		<h2 class="checkinForm-heading">{{ 'HOME.TITLE' | translate }}</h2>
+		<div class="form-group"
+		  [hidden]="validation_errors.length === 0"
+		  class="alert alert-danger" role="alert" *ngIf = '!bookingSuccessful'>
+		  <strong>Some error occurred</strong>
+		  <ul>
+			<li *ngFor="let validation_error of validation_errors">
+			  <span class="text-capitalize">{{validation_error}}:</span>
+			</li>
+		  </ul>
+		</div>
+		
+		<form name = "checkinForm" (ngSubmit)="checkinFormSubmit($event)" novalidate *ngIf = '!bookingSuccessful'>
+	
+		  <mat-form-field class="checking-form-full-width">
+			<input matInput placeholder="{{ 'HOME.BC-TITLE' | translate }}" [formControl]="bookingCodeFormControl"
+				   [errorStateMatcher]="matcher" id = "input1">
+			<mat-error *ngIf="bookingCodeFormControl.hasError('pattern') && !bookingCodeFormControl.hasError('required')">
+			  {{ 'HOME.BC-ERR-INV' | translate }}
+			</mat-error>
+			<mat-error *ngIf="bookingCodeFormControl.hasError('required')">
+			  {{ 'HOME.BC-ERR-REQ' | translate }}
+			</mat-error>
+		  </mat-form-field>
+		  <mat-form-field class="checking-form-full-width">
+			<input matInput placeholder="{{ 'HOME.FN-TITLE' | translate }}" [formControl]="familyNameFormControl"
+				   [errorStateMatcher]="matcher" id = "input2">
+			<mat-error *ngIf="familyNameFormControl.hasError('pattern') && !familyNameFormControl.hasError('required')">
+			 {{ 'HOME.FN-ERR-INV' | translate }}
+			</mat-error>
+			<mat-error *ngIf="familyNameFormControl.hasError('required')">
+			  {{ 'HOME.FN-ERR-REQ' | translate }}
+			</mat-error>
+		  </mat-form-field>
+		  <div class="button-row">
+			  <button mat-raised-button color="primary" type="submit" id="subCheckinForm" value="Submit" aria-label="Submit" ng-disabled="checkinForm.$invalid">{{ 'HOME.BTN-SUBMIT' | translate }}</button>
+		  </div>
+		</form>
+		<h3 *ngIf = 'bookingSuccessful'>Checkin Successful</h3>
+		<hr/>
+	  <mat-form-field>
+		  <mat-select #langSelect (change)="translate.use(langSelect.value)" placeholder="{{ 'HOME.SELECT' | translate }}">
+			<mat-option *ngFor="let lang of translate.getLangs()" [value]="lang" >{{ lang }}</mat-option>
+		  </mat-select>
+	  </mat-form-field>
+</div>
+
+

@@ -1,0 +1,16 @@
+{
+	"HOME": {
+		"TITLE": "Online Checkin Form",
+		"SELECT": "Change language",
+		"BC-TITLE": "Booking Code",
+		"BC-PLACEHOLDER": "Enter booking code here",
+		"BC-ERR-INV": "Please enter a valid booking code",
+		"BC-ERR-REQ": "Booking code is required",
+		"FN-TITLE": "Family Name",
+		"FN-PLACEHOLDER": "Enter family name here",
+		"FN-ERR-INV": "Please enter a valid family name",
+		"FN-ERR-REQ": "Family name is required",
+		"BTN-TRANSLATE": "English",
+		"BTN-SUBMIT": "Submit"
+	}
+}

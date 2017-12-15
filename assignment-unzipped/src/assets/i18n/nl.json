@@ -1,0 +1,17 @@
+{
+  "HOME": {
+    "TITLE": "online formulier voor inchecken",
+    "SELECT": "Changer la langue",
+	"BC-TITLE": "Boekingscode",
+    "BC-PLACEHOLDER": "voer hier de boekingscode in",
+	"BC-ERR-INV": "Voer een geldige boekingscode in",
+	"BC-ERR-REQ": "Boekingscode is verplicht",
+	"FN-TITLE": "achternaam",
+    "FN-PLACEHOLDER": "voer hier de familienaam in",
+	"FN-ERR-INV": "Voer een geldige achternaam in",
+	"FN-ERR-REQ": "Achternaam is verplicht",
+	"BTN-SUBMIT": "voorleggen"
+  }
+  }
+  
+  

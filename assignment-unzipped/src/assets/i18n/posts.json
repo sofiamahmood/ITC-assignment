@@ -1,0 +1,23 @@
+
+[
+	{
+		"bookingCode": "KLM001",
+		"familyName": "Cullen",
+		"checkinAvailablity": "available"
+	},
+	{
+		"bookingCode": "KLM002",
+		"familyName": "Potter",
+		"checkinAvailablity": "not-available"
+	},
+	{
+		"bookingCode": "KLM003",
+		"familyName": "Walter",
+		"checkinAvailablity": "closed"
+	},
+	{
+		"bookingCode": "KLM004",
+		"familyName": "James",
+		"checkinAvailablity": "not-closed"
+	}
+]
